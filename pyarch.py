@@ -32,7 +32,7 @@ config = ["Arch.config"]
 
 info = ["credits.txt" , "license.txt" , "version.txt"]
 
-pacls = ["cat - reads a specified file" , "whoami - prints user information" , "PyFetch - a fetch script for PyLinux" , "echo - prints user input or file location" , "man - shows the PyLinux documentation" , "chname - changes the username" , "chhost - changes the host name" , "license - prints the PyLinux license" , "credits - prints the PyLinux credits" , "map - prints the filesystem map"]
+pacls = ["cat - reads a specified file" , "whoami - prints user information" , "PyFetch - a fetch script for PyArch" , "echo - prints user input or file location" , "man - shows the PyArch documentation" , "chname - changes the username" , "chhost - changes the host name" , "license - prints the PyArch license" , "credits - prints the PyArch credits" , "map - prints the filesystem map"]
 
 custom = 0
 
@@ -45,6 +45,8 @@ name = ""
 host = ""
 
 ls = root
+
+instp = "0"
 
 usernamecustom = 0
 
@@ -128,7 +130,7 @@ while init:
 
                 packages = ["pwd" , "ls" , "cd" , "cat" , "pacman" , "help" , "whoami" , "rm" , "rs" , "PyFetch" , "echo" , "man" , "chname" , "chhost" , "clear" , "license" , "credits" , "license" , "map" , "exit"]
 
-                pacls = ["cat - reads a specified file" , "whoami - prints user information" , "PyFetch - a fetch script for PyLinux" , "echo - prints user input or file location" , "man - shows the PyLinux documentation" , "chname - changes the username" , "chhost - changes the host name" , "license - prints the PyLinux license" , "credits - prints the PyLinux credits" , "map - prints the filesystem map"]
+                pacls = ["cat - reads a specified file" , "whoami - prints user information" , "PyFetch - a fetch script for PyArch" , "echo - prints user input or file location" , "man - shows the PyArch documentation" , "chname - changes the username" , "chhost - changes the host name" , "license - prints the PyArch license" , "credits - prints the PyArch credits" , "map - prints the filesystem map"]
 
                 catinstalled = 1
 
@@ -170,6 +172,8 @@ while init:
 
                 packagescustom = 0
 
+                instp = "10"
+
                 print("Type 'help' for a list of commands")
 
                 arch = 1
@@ -178,7 +182,7 @@ while init:
 
                 packages = pacsystem
 
-                pacls = ["cat - reads a specified file" , "whoami - prints user information" , "PyFetch - a fetch script for PyLinux" , "echo - prints user input or file location" , "man - shows the PyLinux documentation" , "chname - changes the username" , "chhost - changes the host name" , "license - prints the PyLinux license" , "credits - prints the PyLinux credits" , "map - prints the filesystem map"]
+                pacls = ["cat - reads a specified file" , "whoami - prints user information" , "PyFetch - a fetch script for PyArch" , "echo - prints user input or file location" , "man - shows the PyArch documentation" , "chname - changes the username" , "chhost - changes the host name" , "license - prints the PyArch license" , "credits - prints the PyArch credits" , "map - prints the filesystem map"]
 
                 setup = 0
 
@@ -208,9 +212,11 @@ while init:
 
                 cls()
 
+                instp = "0"
+
                 name = "root"
 
-                host = "PyLinux"
+                host = "PyArch"
 
                 print("Type 'help' for a list of commands")
 
@@ -222,7 +228,7 @@ while init:
                 
                 packages = pacsystem
 
-                pacls = ["cat - reads a specified file" , "whoami - prints user information" , "PyFetch - a fetch script for PyLinux" , "echo - prints user input or file location" , "man - shows the PyLinux documentation" , "chname - changes the username" , "chhost - changes the host name" , "license - prints the PyLinux license" , "credits - prints the PyLinux credits" , "map - prints the filesystem map"]
+                pacls = ["cat - reads a specified file" , "whoami - prints user information" , "PyFetch - a fetch script for PyArch" , "echo - prints user input or file location" , "man - shows the PyArch documentation" , "chname - changes the username" , "chhost - changes the host name" , "license - prints the PyArch license" , "credits - prints the PyArch credits" , "map - prints the filesystem map"]
 
                 setup = 0
 
@@ -820,6 +826,8 @@ while init:
                 
                 pacpref = 1
 
+                instp = "10"
+
             if uset == 2:
 
                 pacls = []
@@ -865,6 +873,8 @@ while init:
                 disset = 1
 
                 pacprefselect = 1
+
+                instp = "0"
     
     while arch:
 
@@ -883,7 +893,7 @@ while init:
             print(Back.RESET + Fore.WHITE + "pacman - install a specified package" + Back.RESET + Fore.WHITE)
             print(Back.RESET + Fore.WHITE + "pacls - prints a list to packages" + Back.RESET + Fore.WHITE)
             print(Back.RESET + Fore.WHITE + "clear - clears the screen" + Back.RESET + Fore.WHITE)
-            print(Back.RESET + Fore.WHITE + "exit - exit PyLinux" + Back.RESET + Fore.WHITE)
+            print(Back.RESET + Fore.WHITE + "exit - exit PyArch" + Back.RESET + Fore.WHITE)
 
         if a == "pacls":
 
@@ -1176,3 +1186,82 @@ while init:
             else:
 
                 print(Back.RESET + Fore.WHITE + "map is already installed, run it by typing 'map'" + Back.RESET + Fore.RESET)
+
+        if a == "cat Arch.txt":
+
+            if ls == userfiles:
+
+                if catinstalled == 1:
+
+                    print(Back.RESET + Fore.WHITE + "PyArch is very much inspired by Arch Linux, it's more customizeable from the boot screen." + Back.RESET + Fore.RESET)
+                    print(Back.RESET + Fore.WHITE + "PyArch minus also has a slightly more closed syntax when it comes to two-worded directory names" + Back.RESET + Fore.RESET)
+                    print(Back.RESET + Fore.WHITE + "but it's not that noticeable. The doc command has been replaced with man, and I've added a package" + Back.RESET + Fore.RESET)
+                    print(Back.RESET + Fore.WHITE + "manager in the form of 'pacman' and 'pacls'. It also has highlighting through colorama which makes" + Back.RESET + Fore.RESET)
+                    print(Back.RESET + Fore.WHITE + "it look a lot nicer. Other than that, you still can't add files without editing the source code, " + Back.RESET + Fore.RESET)
+                    print(Back.RESET + Fore.WHITE + "make directories or really edit the filesystem. The only plans I have for PyArch down the line is" + Back.RESET + Fore.RESET)
+                    print(Back.RESET + Fore.WHITE + "to add a few more packages." + Back.RESET + Fore.RESET)
+
+        if a == "cat installs.txt":
+
+            if ls == userfiles:
+
+                if catinstalled == 1:
+
+                    print(Back.RESET + Fore.WHITE + "Out of the box, PyArch comes with 3 options for 'installing' it, full install, which means you get" + Back.RESET + Fore.RESET)
+                    print(Back.RESET + Fore.WHITE + "all possible packages preinstalled, and nothing much else. Then there's lite mode, which just comes" + Back.RESET + Fore.RESET)
+                    print(Back.RESET + Fore.WHITE + "with system-only packages. And the best option, is the custom boot, this allows you to set a custom" + Back.RESET + Fore.RESET)
+                    print(Back.RESET + Fore.WHITE + "username and hostname, and select your package preference. The real benefit is that you can edit your " + Back.RESET + Fore.RESET)
+                    print(Back.RESET + Fore.WHITE + "name without having to install 'chname' and it feels more personal. Later down the line I might add" + Back.RESET + Fore.RESET)
+                    print(Back.RESET + Fore.WHITE + "the option to rename directories and base files. :3" + Back.RESET + Fore.RESET)
+
+        
+        if a == "cat Arch.config":
+
+            if ls == config:
+
+                if catinstalled == 1:
+
+                    print(Back.RESET + Fore.WHITE + "root user: " + name + Back.RESET + Fore.RESET)
+                    print(Back.RESET + Fore.WHITE + "host machine: " + host + Back.RESET + Fore.RESET)
+                    print(Back.RESET + Fore.WHITE + "packages preference: " + pacpref + Back.RESET + Fore.RESET)
+                    print(Back.RESET + Fore.WHITE + "installed packages on boot: " + instp + Back.RESET + Fore.RESET)
+                    print(Back.RESET + Fore.WHITE + "PyArch repository version: 1.0.0" + Back.RESET + Fore.RESET)
+                    print(Back.RESET + Fore.WHITE + "Filesystem access: read-only" + Back.RESET + Fore.RESET)
+
+        if a == "cat credits.txt":
+
+            if ls == info:
+
+                if catinstalled == 1:
+
+                    print(Back.RESET + Fore.WHITE + "Made by Franco M. (SrFluff - GitHub) with Python by Guido van Rossum in Visual Studio Code" + Back.RESET + Fore.RESET)
+                    print(Back.RESET + Fore.WHITE + "by Microsoft, hosted on GitHub by Microsoft, inspired by Linux by Linus Torvals" + Back.RESET + Fore.RESET)
+                    print(Back.RESET + Fore.WHITE + "and Arch by Judd Vinet, Colorama by Jonathan Hartley. All code written by me (Franco M.)" + Back.RESET + Fore.RESET)
+
+        if a == "cat license.txt":
+
+            if ls == info:
+
+                if catinstalled == 1:
+
+                    print(Back.RESET + Fore.WHITE + "Licensed under the GNU public license v3.0" + Back.RESET + Fore.RESET)  
+
+        if a == "credits":
+
+            if creditsinstalled == 1:
+
+                print(Back.RESET + Fore.WHITE + "Made by Franco M. (SrFluff - GitHub) with Python by Guido van Rossum in Visual Studio Code" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "by Microsoft, hosted on GitHub by Microsoft, inspired by Linux by Linus Torvals" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "and Arch by Judd Vinet, Colorama by Jonathan Hartley. All code written by me (Franco M.)" + Back.RESET + Fore.RESET)
+
+        if a == "license":
+
+            if licenseinstalled == 1:
+
+                print(Back.RESET + Fore.WHITE + "Licensed under the GNU public license v3.0" + Back.RESET + Fore.RESET)
+
+        if a == "cat version.txt":
+
+            if catinstalled == 1:
+
+                print(Back.RESET + Fore.WHITE + "PyArch v1.0.0 'Apricot'" + name + Back.RESET + Fore.RESET)
