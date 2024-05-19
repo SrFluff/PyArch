@@ -880,3 +880,87 @@ while init:
         if a == "clear":
 
             cls()
+
+        if a == "cd user-files":
+
+            if ls == root:
+            
+                ls = userfiles
+
+                pwd = "/user-files"
+
+        if a == "cd /user-files":
+
+            ls = userfiles
+
+            pwd = "/userfiles"
+
+        if a == "cd pac":
+
+            if ls == root:
+
+                ls =  pac
+            
+                pwd = "/pac"
+
+        if a == "cd /pac":
+
+            ls = pac
+
+            pwd = "/pac"
+
+        if a == "cd config":
+
+            if ls == root:
+
+                ls = config
+
+                pwd = "/config"
+
+        if a == "cd /config":
+
+            ls = config
+
+            pwd = "/config"
+
+        if a == "cd info":
+
+            if ls == root:
+
+                ls = info
+                
+                pwd = "/info"
+
+        if a == "cd /info":
+
+            ls = info
+
+            pwd = "/info"
+
+        if a == "cd system":
+
+            if ls == pac:
+
+                ls = pacsystem
+
+                pwd = "/pac/system"
+
+        if a == "cd /pac/system":
+
+            ls = pacsystem
+
+            pwd = "/pac/system"
+
+        if a == "cd user":
+
+            if ls == pac:
+
+                ls = pacuser
+                
+                pwd = "/pac/users"
+
+        if a == "cd /pac/user":
+
+            ls = pacuser
+
+            pwd = "/pac/user"
