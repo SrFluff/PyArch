@@ -149,6 +149,8 @@ while init:
                 creditsinstalled = 1
 
                 mapinstalled = 1
+
+                pacuser = ["cat" , "whoami" , "PyFetch" , "echo" , "man" , "chname", "chhost" , "license" , "credits" , "map"]
                 
                 name = "root"
 
@@ -201,6 +203,8 @@ while init:
                 creditsinstalled = 0
 
                 mapinstalled = 0
+
+                pacuser = []
 
                 cls()
 
@@ -728,6 +732,10 @@ while init:
 
                     cls()
 
+                    uset = 1
+
+                    arch = 0
+
                     packagescustom = 1
 
             if uset == 3:
@@ -739,6 +747,10 @@ while init:
                 packagescustom = 0
 
                 custom = 1
+
+                cusset = 1
+
+                arch = 0
 
     while pacprefselect:
 
@@ -780,6 +792,8 @@ while init:
                 
                 pacuser = []
 
+                pacuser = []
+
                 pacprefselect = 0
 
                 packagescustom = 1
@@ -816,8 +830,6 @@ while init:
 
                 pacuser = ["cat" , "whoami" , "rm" , "rs" , "PyFetch" , "echo" , "man" , "chname" , "chhost" , "license" , "credits" , "map" , "pacls"]
 
-                pacprefselect = 0
-
                 packagescustom = 1
 
                 uset = 1
@@ -844,6 +856,16 @@ while init:
                 
                 pacpref = 2
 
+                init = 1
+                
+                arch = 0
+
+                cusset = 1
+
+                disset = 1
+
+                pacprefselect = 1
+    
     while arch:
 
         a = input(Back.RESET + Fore.GREEN + name + "@" + host + Fore.WHITE + ":" + Fore.RESET   + Fore.BLUE + pwd + Fore.RESET + "$ " + Back.RESET + Fore.RESET)
@@ -964,3 +986,193 @@ while init:
             ls = pacuser
 
             pwd = "/pac/user"
+
+        if a == "cd /":
+
+            ls = root
+
+            pwd = "/"
+
+        if a == "cd ..":
+
+            if ls == userfiles:
+
+                ls = root
+
+                pwd = "/"
+
+            if ls == pac:
+
+                ls = root
+
+                pwd = "/"
+
+            if ls == config:
+
+                ls = root
+
+                pwd = "/"
+
+            if ls == pac:
+
+                ls = info
+
+                pwd = "/"
+
+            if ls == pacsystem:
+
+                ls = pac
+                
+                pwd = "/pac"
+
+            if ls == pacuser:
+
+                ls = pac
+
+                pwd = "/pac"
+
+            if ls == info:
+
+                ls = root
+
+                pwd = "/"
+
+        if a == "pacman cat":
+
+            if catinstalled == 0:
+
+                print(Back.RESET + Fore.WHITE + "cat has been installed, for a guide on how to use it, type 'pacls', or look it up with 'man'" + Back.RESET + Fore.RESET)
+
+                pacuser.append('cat')
+
+                catinstalled = 1
+
+            else:
+
+                print(Back.RESET + Fore.WHITE + "cat is already installed, look it up with 'pacls' or 'man'" + Back.RESET + Fore.RESET)
+
+        if a == "pacman whoami":
+
+            if whoamiinstalled == 0:
+
+                print(Back.RESET + Fore.WHITE + "whoami has been installed, type 'whoami' to try it out" + Back.RESET + Fore.RESET)
+
+                pacuser.append('whoami')
+
+                whoamiinstalled = 1
+
+            else:
+
+                print(Back.RESET + Fore.WHITE + "whoami is already installed, run it by typing 'whoami'" + Back.RESET + Fore.RESET)
+
+        if a == "pacman PyFetch":
+
+            if pyfetchinstalled == 0:
+
+                print(Back.RESET + Fore.WHITE + "PyFetch has been sucessfully install, type 'pyfetch' to try it out" + Back.RESET + Fore.RESET)
+
+                pacuser.append('PyFetch')
+
+                pyfetchinstalled = 1
+
+            else:
+
+                print(Back.RESET + Fore.WHITE + "PyFetch is already installed, run it by typing 'pyfetch'" + Back.RESET + Fore.RESET)
+
+        if a == "pacman echo":
+
+            if  echoinstalled == 0:
+
+                print(Back.RESET + Fore.WHITE + "echo has been installed, look it up with 'pacls' or 'man'" + Back.RESET + Fore.RESET)
+
+                pacuser.append('echo')
+
+                echoinstalled = 1
+
+            else:
+
+                print(Back.RESET + Fore.WHITE + "echo is already installed, look it up with 'pacls' or 'man'" + Back.RESET + Fore.RESET)
+
+        if a == "pacman man":
+
+            if maninstalled == 0:
+
+                print(Back.RESET + Fore.WHITE + "man has been installed, type 'man' to try it out" + Back.RESET + Fore.RESET)
+
+                pacuser.append('man')
+
+                maninstalled = 1
+
+            else:
+
+                print(Back.RESET + Fore.WHITE + "man is already installed, run it by typing 'man'" + Back.RESET + Fore.RESET)
+
+        if a == "pacman chname":
+
+            if chnameinstalled == 0:
+
+                print(Back.RESET + Fore.WHITE + "chname has been installed, type 'chname' to try it out" + Back.RESET + Fore.RESET)
+
+                pacuser.append('chname')
+
+                chnameinstalled = 1
+
+            else:
+
+                print(Back.RESET + Fore.WHITE + "chname is already installed, run it by typing 'chname'" + Back.RESET + Fore.RESET)
+
+        if a == "pacman chhost":
+
+            if chhostinstalled == 0:
+
+                print(Back.RESET + Fore.WHITE + "chhost has been installed, type 'chhost' to try it out" + Back.RESET + Fore.RESET)
+
+                pacuser.append('chhost')
+
+                chhostinstalled = 1
+
+            else:
+
+                print(Back.RESET + Fore.WHITE + "chhost is already installed, run it by typing 'chhost'" + Back.RESET + Fore.RESET)
+
+        if a == "pacman license":
+
+            if licenseinstalled == 0:
+
+                print(Back.RESET + Fore.WHITE + "license has been installed, type 'license' to try it out" + Back.RESET + Fore.RESET)
+
+                pacuser.append('license')
+
+                licenseinstalled = 1
+
+            else:
+
+                print(Back.RESET + Fore.WHITE + "license is already installed, run it by typing 'license'" + Back.RESET + Fore.RESET)
+
+        if a == "pacman credits":
+
+            if creditsinstalled == 0:
+
+                print(Back.RESET + Fore.WHITE + "credits has been installed, type 'credits' to try it out" + Back.RESET + Fore.RESET)
+
+                pacuser.append('credits')
+
+                creditsinstalled = 1
+
+            else:
+
+                print(Back.RESET + Fore.WHITE + "credits is already installed, run it by typing 'credits'" + Back.RESET + Fore.RESET) 
+
+        if a == "pacman map":
+
+            if mapinstalled == 0:
+
+                print(Back.RESET + Fore.WHITE + "map has been installed, type 'map' to try it out" + Back.RESET + Fore.RESET)
+
+                pacuser.append('map')
+
+                mapinstalled = 1
+
+            else:
+
+                print(Back.RESET + Fore.WHITE + "map is already installed, run it by typing 'map'" + Back.RESET + Fore.RESET)
