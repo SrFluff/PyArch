@@ -32,7 +32,7 @@ config = ["Arch.config"]
 
 info = ["credits.txt" , "license.txt" , "version.txt"]
 
-pacls = ["cat - reads a specified file" , "whoami - prints user information" , "PyFetch - a fetch script for PyArch" , "echo - prints user input or file location" , "man - shows the PyArch documentation" , "chname - changes the username" , "chhost - changes the host name" , "license - prints the PyArch license" , "credits - prints the PyArch credits" , "map - prints the filesystem map"]
+pacls = ["cat - reads a specified file" , "whoami - prints user name" , "PyFetch - a fetch script for PyArch" , "echo - prints user input or file location" , "man - shows the PyArch documentation" , "chname - changes the username" , "chhost - changes the host name" , "license - prints the PyArch license" , "credits - prints the PyArch credits" , "map - prints the filesystem map"]
 
 custom = 0
 
@@ -130,7 +130,7 @@ while init:
 
                 packages = ["pwd" , "ls" , "cd" , "cat" , "pacman" , "help" , "whoami" , "rm" , "rs" , "PyFetch" , "echo" , "man" , "chname" , "chhost" , "clear" , "license" , "credits" , "license" , "map" , "exit"]
 
-                pacls = ["cat - reads a specified file" , "whoami - prints user information" , "PyFetch - a fetch script for PyArch" , "echo - prints user input or file location" , "man - shows the PyArch documentation" , "chname - changes the username" , "chhost - changes the host name" , "license - prints the PyArch license" , "credits - prints the PyArch credits" , "map - prints the filesystem map"]
+                pacls = ["cat - reads a specified file" , "whoami - prints user name" , "PyFetch - a fetch script for PyArch" , "echo - prints user input or file location" , "man - shows the PyArch documentation" , "chname - changes the username" , "chhost - changes the host name" , "license - prints the PyArch license" , "credits - prints the PyArch credits" , "map - prints the filesystem map"]
 
                 catinstalled = 1
 
@@ -182,7 +182,7 @@ while init:
 
                 packages = pacsystem
 
-                pacls = ["cat - reads a specified file" , "whoami - prints user information" , "PyFetch - a fetch script for PyArch" , "echo - prints user input or file location" , "man - shows the PyArch documentation" , "chname - changes the username" , "chhost - changes the host name" , "license - prints the PyArch license" , "credits - prints the PyArch credits" , "map - prints the filesystem map"]
+                pacls = ["cat - reads a specified file" , "whoami - prints user name" , "PyFetch - a fetch script for PyArch" , "echo - prints user input or file location" , "man - shows the PyArch documentation" , "chname - changes the username" , "chhost - changes the host name" , "license - prints the PyArch license" , "credits - prints the PyArch credits" , "map - prints the filesystem map"]
 
                 setup = 0
 
@@ -228,7 +228,7 @@ while init:
                 
                 packages = pacsystem
 
-                pacls = ["cat - reads a specified file" , "whoami - prints user information" , "PyFetch - a fetch script for PyArch" , "echo - prints user input or file location" , "man - shows the PyArch documentation" , "chname - changes the username" , "chhost - changes the host name" , "license - prints the PyArch license" , "credits - prints the PyArch credits" , "map - prints the filesystem map"]
+                pacls = ["cat - reads a specified file" , "whoami - prints user name" , "PyFetch - a fetch script for PyArch" , "echo - prints user input or file location" , "man - shows the PyArch documentation" , "chname - changes the username" , "chhost - changes the host name" , "license - prints the PyArch license" , "credits - prints the PyArch credits" , "map - prints the filesystem map"]
 
                 setup = 0
 
@@ -1265,3 +1265,107 @@ while init:
             if catinstalled == 1:
 
                 print(Back.RESET + Fore.WHITE + "PyArch v1.0.0 'Apricot'" + name + Back.RESET + Fore.RESET)
+
+        if a == "whoami":
+
+            if whoamiinstalled == 1:
+            
+                print(Back.RESET + Fore.WHITE + name + Back.RESET + Fore.RESET)
+
+        if a == "pyfetch":
+
+            if pyfetchinstalled == 1:
+
+                print(Back.RESET + Fore.WHITE + "OS: PyArch v1.0.0 'Apricot'" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "Name: " + name + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "Host: " + host + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "Kernel: PyLinux kernel v1.0.0" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "Shell: N/A" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "Package manager: pacman" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "Main repository: PyArch repo 1" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "Installer: PyArch basic installer" + Back.RESET + Fore.RESET)
+
+        if a == "chname":
+
+            if chnameinstalled == 1:
+
+                cls()
+
+                print(Back.RESET + Fore.WHITE + "Type your new username (Leave blank to cancel)\n" + Back.RESET + Fore.RESET)
+
+                a = input(Back.RESET + Fore.WHITE + "> " + Back.RESET + Fore.RESET)
+
+                if not a == "":
+
+                    name = a
+
+                print(Back.RESET + Fore.WHITE + "Type 'help' for a list of commands" + Back.RESET + Fore.RESET)
+
+        if a == "chhost":
+
+            if chhostinstalled == 1:
+
+                cls()
+
+                print(Back.RESET + Fore.WHITE + "Type your new hostname (Leave blank to cancel)\n" + Back.RESET + Fore.RESET)
+
+                a = input(Back.RESET + Fore.WHITE + "> " + Back.RESET + Fore.RESET)
+
+                if not a == "": 
+
+                    host = a
+
+                print(Back.RESET + Fore.WHITE + "Type 'help' for a list of commands" + Back.RESET + Fore.RESET)
+
+        if a == "echo":
+
+            if echoinstalled == 1:
+            
+                a = input("> ")
+
+                if a == "Arch.txt":
+
+                    print(Back.RESET + Fore.WHITE + "/user-files" + Back.RESET + Fore.RESET)
+
+                if a == "installs .txt":
+
+                    print(Back.RESET + Fore.WHITE + "/user-files" + Back.RESET + Fore.RESET)
+
+                if a == "Arch.config":
+
+                    print(Back.RESET + Fore.WHITE + "/config" + Back.RESET + Fore.RESET)
+
+                if a == "credits.txt":
+
+                    print(Back.RESET + Fore.WHITE + "/info" + Back.RESET + Fore.RESET)
+
+                if a == "license.txt":
+
+                    print(Back.RESET + Fore.WHITE + "/info" + Back.RESET + Fore.RESET)
+
+                if a == "version.txt":
+
+                    print(Back.RESET + Fore.WHITE + "/info" + Back.RESET + Fore.RESET)
+
+                else:
+
+                   print(Back.RESET + Fore.WHITE + a + Back.RESET + Fore.RESET)
+
+        if a == "map":
+
+            if mapinstalled == 1:
+
+                print(Back.RESET + Fore.WHITE + "/" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "-> /user-files /pac /config /info" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "/user-files" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "-> Arch.txt installs.txt" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "/pac" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "-> /system /user" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "/system" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "-> pwd ls cd pacman help clear exit" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "/user" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "-> !^$#$**&@$*&$&*#*&$@&)" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "/config" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "-> Arch.config" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "/info" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "-> credits.txt license.txt version.txt" + Back.RESET + Fore.RESET)
