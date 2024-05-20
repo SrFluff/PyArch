@@ -1369,3 +1369,31 @@ while init:
                 print(Back.RESET + Fore.WHITE + "-> Arch.config" + Back.RESET + Fore.RESET)
                 print(Back.RESET + Fore.WHITE + "/info" + Back.RESET + Fore.RESET)
                 print(Back.RESET + Fore.WHITE + "-> credits.txt license.txt version.txt" + Back.RESET + Fore.RESET)
+
+        if a == "man":
+
+            if maninstalled:
+
+                print(Back.RESET + Fore.WHITE + "PyArch Manual" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "By Franco M.\n" + Back.RESET + Fore.RESET)
+                
+                print(Back.RESET + Fore.WHITE + "Navigating the filesystem\n" + Back.RESET + Fore.RESET)
+
+                print(Back.RESET + Fore.WHITE + "pwd\n" + Back.RESET + Fore.RESET)
+                
+                print(Back.RESET + Fore.WHITE + "To print the current working directory use the 'pwd' the current directory is also displayed" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "after the hostname and before the '$', here's an example: 'user:@host/$' where '/' is the working" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "directory\n" + Back.RESET + Fore.RESET)
+
+                print(Back.RESET + Fore.WHITE + "ls\n" + Back.RESET + Fore.RESET)
+
+                print(Back.RESET + Fore.WHITE + "To list the contents of the current directory type 'ls' and all the contents will be printed three" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "spaces appart from eachother. Anything that isn't followed by .txt, or anything that isn't in the" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "/pac/system or /pac/user directory is a directory, or sub-directory.\n" + Back.RESET + Fore.RESET)
+
+                print(Back.RESET + Fore.WHITE + "cd\n" + Back.RESET + Fore.RESET)
+
+                print(Back.RESET + Fore.WHITE + "To change the current directory type 'cd' followed by the name or path of a directory, if you only" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "specify the name then you must be in a directory directly below that directory, for example: /pac is" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "bellow /pac/system. If you use the full filepath, like going from /pac/user to / you don't need to" + Back.RESET + Fore.RESET)
+                print(Back.RESET + Fore.WHITE + "worry about " + Back.RESET + Fore.RESET)
